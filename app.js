@@ -24,6 +24,14 @@ app.get('/second', (request, response) => {
     })
 });
 
+app.get('/projects', (request, response) =>{
+    response.render('test.hbs', {
+        note: 'Projects Page',
+        title: 'Projects Page',
+        year: new Date().getFullYear()
+    })
+});
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
